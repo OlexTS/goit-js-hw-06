@@ -12,3 +12,14 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const galleryRef = document.querySelector('.gallery');
+const imagesArr = [];
+for (const {url, alt} of images) {
+  const imagesTagEl = `<img src= ${url} alt= ${alt} width = 200 />`
+  // console.log(imagesTagEl)
+  imagesArr.push(imagesTagEl);
+}
+const markup = imagesArr.map(img => `<li>${img}</li>`).join('');
+// console.log(markup)
+galleryRef.insertAdjacentHTML("afterbegin", markup);
