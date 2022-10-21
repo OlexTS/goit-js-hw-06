@@ -14,12 +14,14 @@ const images = [
 ];
 
 const galleryRef = document.querySelector('.gallery');
-const imagesArr = [];
-for (const {url, alt} of images) {
-  const imagesTagEl = `<img src= ${url} alt= ${alt} width = 200 />`
-  // console.log(imagesTagEl)
-  imagesArr.push(imagesTagEl);
-}
-const markup = imagesArr.map(img => `<li>${img}</li>`).join('');
+// const imagesArr = [];
+// for (const {url, alt} of images) {
+//   const imagesTagEl = `<img src= ${url} alt= ${alt} width = 200 />`
+//   // console.log(imagesTagEl)
+//   imagesArr.push(imagesTagEl);
+// }
+// const markup = imagesArr.map(img => `<li>${img}</li>`).join('');
 // console.log(markup)
+
+const markup = images.map(({url, alt}) => `<li><img src= ${url} alt= ${alt} width = 200/></li>`).join('')
 galleryRef.insertAdjacentHTML("afterbegin", markup);
