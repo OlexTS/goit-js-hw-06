@@ -10,4 +10,4 @@ const onInputFocusOut = () => {
     }
     
 }
-validatedInputRef.addEventListener('blur', onInputFocusOut)
+validatedInputRef.addEventListener('blur', onInputFocusOut);
