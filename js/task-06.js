@@ -1,7 +1,7 @@
 const validatedInputRef = document.querySelector("#validation-input");
 
 const onInputFocusOut = () => {
-  if (validatedInputRef.value.length >= validatedInputRef.dataset.length) {
+  if (validatedInputRef.value.length === Number(validatedInputRef.dataset.length)) {
     validatedInputRef.classList.add("valid");
     validatedInputRef.classList.remove("invalid");
   } else {
